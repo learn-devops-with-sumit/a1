@@ -1,19 +1,14 @@
 name: MY workflow
-
 on: push
-
-jobs: 
-    first_job:
-        runs-on: ubuntu-latest 
-        steps:
-            - name: checkout Repo
-              run: actions/checkout@v4
-              
-            - name: welcome message
-              run: echo "my first actions job"
-
-            - name: List files
-              run: ls
-
-            - name: Read file
-              run:   cat README.md
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout Repo
+        uses: actions/checkout@v4
+      - name: welcome message
+        run: echo "my first actions job"
+      - name: List files
+        run: ls
+      - name: Read file
+        run: cat README.md
